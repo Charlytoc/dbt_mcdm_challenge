@@ -1,0 +1,1 @@
+SELECT *  FROM `analytics-385219.dbt_curated.src_ads_bing_all_data` LIMIT 200
