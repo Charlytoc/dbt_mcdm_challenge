@@ -1,0 +1,18 @@
+SELECT campaign_id, adset_id, ad_id, 
+       spend / conv AS conversion_cost
+FROM dbt_curated.src_ads_bing_all_data
+WHERE conv > 0
+
+SELECT AVG(spend / conv) AS avg_conversion_cost
+FROM dbt_curated.src_ads_bing_all_data
+WHERE conv > 0
+
+
+SELECT campaign_id, adset_id, ad_id, 
+       spend / clicks AS cost_per_click
+FROM dbt_curated.src_ads_bing_all_data
+WHERE clicks > 0
+
+SELECT AVG(spend / clicks) AS avg_clicks
+FROM dbt_curated.src_ads_bing_all_data
+WHERE conv > 0
